@@ -11,6 +11,11 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({ title, description, icon, className }: FeatureCardProps) => {
+  // Truncate description if it's too long
+  const shortDescription = description.length > 80 
+    ? `${description.substring(0, 80).trim()}...` 
+    : description;
+    
   return (
     <div 
       className={cn(
@@ -19,8 +24,8 @@ const FeatureCard = ({ title, description, icon, className }: FeatureCardProps) 
       )}
     >
       <HexagonIcon>{icon}</HexagonIcon>
-      <h3 className="text-xl font-bold mb-3 text-hive-blue-dark">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-bold mb-2 mt-2 text-hive-blue-dark">{title}</h3>
+      <p className="text-gray-600 text-sm">{shortDescription}</p>
     </div>
   );
 };
