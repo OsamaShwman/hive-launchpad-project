@@ -1,4 +1,3 @@
-
 import React from "react";
 import Logo from "@/components/Logo";
 import Button from "@/components/Button";
@@ -6,12 +5,9 @@ import SectionHeading from "@/components/SectionHeading";
 import FeatureCard from "@/components/FeatureCard";
 import ValueCard from "@/components/ValueCard";
 import { Calendar, Brain, Trophy, Users, Check, Linkedin, Instagram, Facebook } from "lucide-react";
-
 const Index = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <div className="min-h-screen bg-white overflow-hidden">
+  return <div className="min-h-screen bg-white overflow-hidden">
       {/* Hero Section */}
       <section className="bg-hive-blue hexagon-bg min-h-[80vh] flex items-center justify-center text-white">
         <div className="container-width section-padding flex flex-col items-center animate-fade-in">
@@ -46,26 +42,10 @@ const Index = () => {
         <div className="container-width">
           <SectionHeading>What We Do</SectionHeading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FeatureCard
-              title="Event Planning & Hosting"
-              description="Coordinate, plan, and host impactful events, exhibitions, and conferences. We create memorable experiences for our clients and their audiences."
-              icon={<Calendar />}
-            />
-            <FeatureCard
-              title="Skill Development & Training"
-              description="Provide workshops, intensive courses, and hands-on training. Access programs that align with industry needs."
-              icon={<Brain />}
-            />
-            <FeatureCard
-              title="Competitions & Certifications"
-              description="Organize innovation and entrepreneurship competitions. Enable students to qualify for valuable certificates."
-              icon={<Trophy />}
-            />
-            <FeatureCard
-              title="Mentorship & Networking"
-              description="Connect students with mentors and successful entrepreneurs. Build strong networks with industry professionals."
-              icon={<Users />}
-            />
+            <FeatureCard title="Event Planning & Hosting" description="Coordinate, plan, and host impactful events, exhibitions, and conferences. We create memorable experiences for our clients and their audiences." icon={<Calendar />} />
+            <FeatureCard title="Skill Development & Training" description="Provide workshops, intensive courses, and hands-on training. Access programs that align with industry needs." icon={<Brain />} />
+            <FeatureCard title="Competitions & Certifications" description="Organize innovation and entrepreneurship competitions. Enable students to qualify for valuable certificates." icon={<Trophy />} />
+            <FeatureCard title="Mentorship & Networking" description="Connect students with mentors and successful entrepreneurs. Build strong networks with industry professionals." icon={<Users />} />
           </div>
         </div>
       </section>
@@ -75,18 +55,9 @@ const Index = () => {
         <div className="container-width">
           <SectionHeading>Our Core Values</SectionHeading>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ValueCard
-              title="Student-Led"
-              description="Built by students, for students. We know what future leaders need."
-            />
-            <ValueCard
-              title="Learn by Doing"
-              description="We value action. Turn knowledge into skills and ideas into impact."
-            />
-            <ValueCard
-              title="Inclusive"
-              description="Open to all students from all majors. If you're curious and driven, you belong in Hive."
-            />
+            <ValueCard title="Student-Led" description="Built by students, for students. We know what future leaders need." />
+            <ValueCard title="Learn by Doing" description="We value action. Turn knowledge into skills and ideas into impact." />
+            <ValueCard title="Inclusive" description="Open to all students from all majors. If you're curious and driven, you belong in Hive." />
           </div>
         </div>
       </section>
@@ -97,18 +68,10 @@ const Index = () => {
           <SectionHeading className="text-white">Why Choose Hive?</SectionHeading>
           <div className="max-w-3xl mx-auto">
             <ul className="space-y-4">
-              {[
-                "Created by students who understand student needs.",
-                "Combines academic knowledge with practical, hands-on experience.",
-                "Offers flexible programs aligned with market demands.",
-                "Supported by a strong network of mentors and partners.",
-                "Founded by students experienced in community building and impactful initiatives."
-              ].map((item, index) => (
-                <li key={index} className="flex items-start">
+              {["Created by students who understand student needs.", "Combines academic knowledge with practical, hands-on experience.", "Offers flexible programs aligned with market demands.", "Supported by a strong network of mentors and partners.", "Founded by students experienced in community building and impactful initiatives."].map((item, index) => <li key={index} className="flex items-start">
                   <Check className="mr-3 text-hive-yellow shrink-0 mt-1" />
                   <span className="text-lg">{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
         </div>
@@ -202,8 +165,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
