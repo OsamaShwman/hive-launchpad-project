@@ -5,7 +5,7 @@ import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import FeatureCard from "@/components/FeatureCard";
 import ValueCard from "@/components/ValueCard";
-import { Calendar, Brain, Trophy, Users, Check } from "lucide-react";
+import { Calendar, Brain, Trophy, Users, Check, Linkedin, Instagram, Facebook } from "lucide-react";
 
 const Index = () => {
   const currentYear = new Date().getFullYear();
@@ -176,11 +176,27 @@ const Index = () => {
       <footer className="bg-gray-900 text-gray-300 py-8 px-4">
         <div className="container-width">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
+            <div className="mb-6 md:mb-0">
               <Logo />
             </div>
-            <div className="text-center md:text-right">
+            <div className="flex flex-col items-center md:items-end mb-6 md:mb-0">
               <p className="mb-2">Email: hive@string.education</p>
+              <div className="flex gap-4 mt-2">
+                <a href="https://www.linkedin.com/company/hivejor" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-hive-yellow transition-colors">
+                  <Linkedin size={24} />
+                  <span className="sr-only">LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/hivejor" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-hive-yellow transition-colors">
+                  <Instagram size={24} />
+                  <span className="sr-only">Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61575210633277" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-hive-yellow transition-colors">
+                  <Facebook size={24} />
+                  <span className="sr-only">Facebook</span>
+                </a>
+              </div>
+            </div>
+            <div className="text-center md:text-right">
               <p>© {currentYear} Hive. All rights reserved.</p>
             </div>
           </div>
