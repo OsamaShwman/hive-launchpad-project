@@ -9,6 +9,11 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  preview: {
+    host: "0.0.0.0", // Ensure it listens on all interfaces for Docker
+    port: 4173, // Default Vite preview port
+    allowedHosts: ["hive.steamhub.cloud"],
+  },
   plugins: [
     react(),
     mode === 'development' &&
