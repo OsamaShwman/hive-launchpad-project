@@ -13,7 +13,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="bg-hive-blue hexagon-bg min-h-[80vh] flex items-center justify-center text-white">
         <div className="container-width section-padding flex flex-col items-center animate-fade-in">
-          <Logo className="mb-8 text-5xl" />
+          <Logo className="mb-8 text-5xl" size="large" />
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold max-w-4xl mb-6 leading-tight">
             Empowering the Next Generation of Entrepreneurs
           </h1>
@@ -140,7 +140,7 @@ const Index = () => {
         <div className="container-width">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <Logo />
+              <Logo size="small" />
             </div>
             <div className="flex flex-col items-center md:items-end mb-6 md:mb-0">
               <p className="mb-2">Email: hive@string.education</p>
