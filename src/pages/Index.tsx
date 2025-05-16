@@ -1,3 +1,4 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import Button from "@/components/Button";
@@ -5,6 +6,7 @@ import SectionHeading from "@/components/SectionHeading";
 import FeatureCard from "@/components/FeatureCard";
 import ValueCard from "@/components/ValueCard";
 import { Calendar, Brain, Trophy, Users, Check, Linkedin, Instagram, Facebook } from "lucide-react";
+
 const Index = () => {
   const currentYear = new Date().getFullYear();
   return <div className="min-h-screen bg-white overflow-hidden">
@@ -19,14 +21,14 @@ const Index = () => {
             Hive is a student-led community bridging the gap between academic theory and 
             real-world practice. We equip students with the skills, network, and experience to thrive.
           </p>
-          <Button size="lg">Join the Hive</Button>
+          <Button size="lg" onClick={() => window.open("https://forms.gle/Ra9auVocNJPmUZms6", "_blank")}>Join the Hive</Button>
         </div>
       </section>
 
       {/* Our Story Section */}
       <section className="section-padding bg-white">
         <div className="container-width">
-          <SectionHeading>Our Story: Bridging the Gap</SectionHeading>
+          <SectionHeading>Our Story</SectionHeading>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-lg mb-8">
               As students, we all face the same problem: what we learn in the classroom is not enough. 
@@ -126,10 +128,8 @@ const Index = () => {
             <p className="text-xl font-redhat font-bold mb-10">
               This is just the beginning. Let's shape the future, together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary">Become a Mentor</Button>
-              <Button variant="primary">Partner With Us</Button>
-              <Button variant="outline">Join Our Community</Button>
+            <div className="flex justify-center">
+              <Button variant="outline" onClick={() => window.open("https://forms.gle/Ra9auVocNJPmUZms6", "_blank")}>Join Our Community</Button>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@ const Index = () => {
                   <Linkedin size={24} />
                   <span className="sr-only">LinkedIn</span>
                 </a>
-                <a href="https://www.instagram.com/hivejor" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-hive-yellow transition-colors">
+                <a href="https://www.instagram.com/hivejor?igsh=Nmx0cnRxNTZrbmY4" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-hive-yellow transition-colors">
                   <Instagram size={24} />
                   <span className="sr-only">Instagram</span>
                 </a>
