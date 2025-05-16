@@ -1,6 +1,5 @@
 
 import React from "react";
-import HexagonDot from "./HexagonDot";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -10,11 +9,12 @@ interface LogoProps {
 
 const Logo = ({ className, dark = false }: LogoProps) => {
   return (
-    <div className={cn("font-redhat font-bold text-3xl flex items-center", 
-      dark ? "text-hive-blue-dark" : "text-white", 
-      className
-    )}>
-      H<HexagonDot />ve
+    <div className={cn("font-redhat font-bold", className)}>
+      <img 
+        src="/lovable-uploads/7a81db87-bc33-4aec-992e-0b4a36424818.png" 
+        alt="Hive Logo" 
+        className="h-12" 
+      />
     </div>
   );
 };
